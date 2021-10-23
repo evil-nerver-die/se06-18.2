@@ -21,4 +21,9 @@ Use Unity 2020.2.7f1 to open the project
 In your Unity editor, choose File/ Build Settings and then click 
 Player Settings Button. In Publishing Setting set new keystore password then click Build to build apk file.
 
-
+Member:
+- Le Hoang Long
+- Le Manh Hung
+- Nguyen Minh Son
+- Nguyen Tien Phuc
+- Tran Thu Hien
