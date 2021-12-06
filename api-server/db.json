@@ -1,0 +1,25 @@
+{
+  "coins": [
+    {
+      "id": 1,
+      "count": 4,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "count": 5,
+      "userId": 2
+    }
+  ],
+  "stars": [
+    {
+      "id": 1,
+      "count": 3,
+      "userId": 1
+    }
+  ],
+  "user": {
+    "id": 1,
+    "name": "hungle"
+  }
+}
