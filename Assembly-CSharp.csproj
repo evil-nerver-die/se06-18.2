@@ -216,6 +216,7 @@
      <Compile Include="Assets\Scripts\_2dxFX_CircleFade.cs" />
      <Compile Include="Assets\Scripts\WallBehaviour.cs" />
      <Compile Include="Assets\Scripts\TasksButton.cs" />
+     <Compile Include="Assets\Scripts\Api\ApiHelper.cs" />
      <Compile Include="Assets\Scripts\Expressive\Functions\String\ContainsFunction.cs" />
      <Compile Include="Assets\Scripts\DigitalRuby\ThunderAndLightning\ThunderAndLightningScript.cs" />
      <Compile Include="Assets\Scripts\CarDragTarget.cs" />
@@ -254,6 +255,7 @@
      <Compile Include="Assets\Scripts\CarVariantInteractionButton.cs" />
      <Compile Include="Assets\Scripts\_2dxFX_NewTeleportation.cs" />
      <Compile Include="Assets\Scripts\CurrencyPurchaseDialogColumn.cs" />
+     <Compile Include="Assets\Scripts\Api\Star.cs" />
      <Compile Include="Assets\Scripts\CurrencyPurchaseCurrencyVisualConfig.cs" />
      <Compile Include="Assets\Scripts\TMPro\Examples\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\Expressive\Functions\Mathematical\PowFunction.cs" />
@@ -357,6 +359,7 @@
      <Compile Include="Assets\Scripts\GGClearCommand.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\SuggestMoveType.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\IRemoveFromHistoryEventListener.cs" />
+     <Compile Include="Assets\Scripts\Api\Coin.cs" />
      <Compile Include="Assets\Scripts\UIWaitForTap.cs" />
      <Compile Include="Assets\Scripts\OutOfLivesDialog.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\LightSlotComponent.cs" />
@@ -459,6 +462,7 @@
      <Compile Include="Assets\Scripts\TMPro\Examples\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\LevelDefinition.cs" />
      <Compile Include="Assets\Scripts\Expressive\Functions\Conversion\DecimalFunction.cs" />
+     <Compile Include="Assets\Scripts\Api\GetData.cs" />
      <Compile Include="Assets\Scripts\GeometryConnector.cs" />
      <Compile Include="Assets\Scripts\_2dxFX_AL_Ghost.cs" />
      <Compile Include="Assets\Scripts\SubpartVariant.cs" />

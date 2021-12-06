@@ -181,11 +181,15 @@ public class WalletManager
 			global::SecureLong secureLong = 0L;
 			if (type == CurrencyType.coins)
 			{
-				secureLong = new global::SecureLong(this.model.secCoins, (long)this.model.coins);
+				string jsonResponse = ApiHelper.getApiData("http://localhost:3000/stars/1");
+				return GetData.getStar(jsonResponse);
+				//secureLong = new global::SecureLong(this.model.secCoins, (long)this.model.coins);
 			}
 			else if (type == CurrencyType.diamonds)
 			{
-				secureLong = new global::SecureLong(this.model.secDiamonds, (long)this.model.diamonds);
+				string jsonResponse = ApiHelper.getApiData("http://localhost:3000/coins/1");
+				return GetData.getCoin(jsonResponse);
+				//secureLong = new global::SecureLong(this.model.secDiamonds, (long)this.model.diamonds);
 			}
 			else
 			{
@@ -195,7 +199,9 @@ public class WalletManager
 		}
 		if (type == CurrencyType.coins)
 		{
-			return (long)this.model.coins;
+			string jsonResponse = ApiHelper.getApiData("http://localhost:3000/stars/1");
+			return GetData.getStar(jsonResponse);
+			//return (long)this.model.coins;
 		}
 		if (type == CurrencyType.diamonds)
 		{
