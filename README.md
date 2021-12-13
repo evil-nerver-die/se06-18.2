@@ -1,4 +1,6 @@
 # se06-18.2
+
+## Introduction 
 Lập trình game với Unity #1
 
 Design beautiful homes in bright and sunny places and solve 
@@ -12,6 +14,8 @@ furniture.
 - Lot's of match-3 levels to enjoy
 - Light and Fun Gameplay
 
+## How to setup
+
 Use Unity 2020.2.7f1 to open the project
 - JDK version: jdk1.8.0_77
 - gradle version: gradle 6.9
@@ -21,7 +25,12 @@ Use Unity 2020.2.7f1 to open the project
 In your Unity editor, choose File/ Build Settings and then click 
 Player Settings Button. In Publishing Setting set new keystore password then click Build to build apk file.
 
-Member:
+## Task lists
+- [x] Design game scenes, replace some icon.
+- [ ] Add text.
+- [ ] Connect with Api server.
+
+## Members:
 - Le Hoang Long
 - Le Manh Hung
 - Nguyen Minh Son
