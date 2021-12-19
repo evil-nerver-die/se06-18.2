@@ -125,6 +125,7 @@
      <Compile Include="Assets\Scripts\_2dxFX_AL_Distortion.cs" />
      <Compile Include="Assets\Scripts\_2dxFX_SkyCloud.cs" />
      <Compile Include="Assets\Scripts\Analytics.cs" />
+     <Compile Include="Assets\Scripts\PostPutMethod\PutMethod.cs" />
      <Compile Include="Assets\Scripts\Expressive\Expressions\FunctionExpression.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\DiscoBallAffector.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\DestroyMatchingIslandBlinkAction.cs" />
@@ -161,6 +162,7 @@
      <Compile Include="Assets\Scripts\GGMatch3\SwapParams.cs" />
      <Compile Include="Assets\Scripts\_2dxFX_AL_Hologram2.cs" />
      <Compile Include="Assets\Scripts\GGSoundSystem.cs" />
+     <Compile Include="Assets\Scripts\PostPutMethod\PostMethod.cs" />
      <Compile Include="Assets\Scripts\_2dxFX_PlasmaRainbow_Color.cs" />
      <Compile Include="Assets\Scripts\GGFileIOCloudSync.cs" />
      <Compile Include="Assets\Scripts\LevelEditorMonster.cs" />
@@ -519,6 +521,7 @@
      <Compile Include="Assets\Scripts\Expressive\Helpers\Comparison.cs" />
      <Compile Include="Assets\Scripts\Expressive\Functions\Mathematical\TruncateFunction.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\DiscoChipAffector.cs" />
+     <Compile Include="Assets\Scripts\PostPutMethod\Coin.cs" />
      <Compile Include="Assets\Scripts\CharacterVisualObjectVariation.cs" />
      <Compile Include="Assets\Scripts\GGSnapshotFileIO.cs" />
      <Compile Include="Assets\Scripts\RandomRotate.cs" />
@@ -802,6 +805,7 @@
      <Compile Include="Assets\Scripts\BubblesBoxFloorRenderer.cs" />
      <Compile Include="Assets\Scripts\UpdateParams.cs" />
      <Compile Include="Assets\Scripts\_2DC_ShaderLerpDemo.cs" />
+     <Compile Include="Assets\Scripts\PostPutMethod\Star.cs" />
      <Compile Include="Assets\Scripts\_2dxFX_AL_4Gradients.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\EmptyConveyorSpace.cs" />
      <Compile Include="Assets\Scripts\GGMatch3\Chip.cs" />
@@ -911,10 +915,6 @@
      <Compile Include="Assets\Scripts\GGMatch3\DestroyAfterAction.cs" />
      <Compile Include="Assets\Scripts\CarScene.cs" />
      <Compile Include="Assets\Scripts\GGUIDPrivate.cs" />
-     <Compile Include="Assets\Scripts\PostPutData\PostMethod.cs" />
-     <Compile Include="Assets\Scripts\PostPutData\Coin.cs" />
-     <Compile Include="Assets\Scripts\PostPutData\Star.cs" />
-     <Compile Include="Assets\Scripts\PostPutData\PutMethod.cs" />
      <None Include="Assets\Shaders\Particles_Alpha Blended Overlayed.shader" />
      <None Include="Assets\Resources\2DxFX\AL\2DxFX_AL_Heat.shader" />
      <None Include="Assets\Resources\2DxFX\Standard\2DxFX_Standard_FireAdditive.shader" />
