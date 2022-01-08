@@ -182,10 +182,12 @@ public class WalletManager
 			if (type == CurrencyType.coins)
 			{
 				secureLong = new global::SecureLong(this.model.secCoins, (long)this.model.coins);
+				//secureLong = 50000L;
 			}
 			else if (type == CurrencyType.diamonds)
 			{
 				secureLong = new global::SecureLong(this.model.secDiamonds, (long)this.model.diamonds);
+				//secureLong = 150L;
 			}
 			else
 			{
@@ -196,6 +198,7 @@ public class WalletManager
 		if (type == CurrencyType.coins)
 		{
 			return (long)this.model.coins;
+			//return 5000;
 		}
 		if (type == CurrencyType.diamonds)
 		{
