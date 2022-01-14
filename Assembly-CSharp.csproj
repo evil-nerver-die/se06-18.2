@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{43ef68aa-f331-c6cb-2699-764a8dfdb30e}</ProjectGuid>
+    <ProjectGuid>{5559d4e6-d78b-f648-193f-564a3ef3aa56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -915,6 +915,9 @@
      <Compile Include="Assets\Scripts\GGMatch3\DestroyAfterAction.cs" />
      <Compile Include="Assets\Scripts\CarScene.cs" />
      <Compile Include="Assets\Scripts\GGUIDPrivate.cs" />
+     <Compile Include="Assets\Scripts\Api\PostData.cs" />
+     <Compile Include="Assets\Scripts\Api\DeleteData.cs" />
+     <Compile Include="Assets\Scripts\Api\PutData.cs" />
      <None Include="Assets\Shaders\Particles_Alpha Blended Overlayed.shader" />
      <None Include="Assets\Resources\2DxFX\AL\2DxFX_AL_Heat.shader" />
      <None Include="Assets\Resources\2DxFX\Standard\2DxFX_Standard_FireAdditive.shader" />
@@ -1334,31 +1337,31 @@
         <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/protobuf-net.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="ProtoSerializer">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/ProtoSerializer.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/ProtoSerializer.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.SecurityToken">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/AWSSDK.SecurityToken.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/AWSSDK.SecurityToken.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Data.Sqlite">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.Core">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/AWSSDK.Core.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.KinesisFirehose">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/AWSSDK.KinesisFirehose.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/AWSSDK.KinesisFirehose.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.CognitoIdentity">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/AWSSDK.CognitoIdentity.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/AWSSDK.CognitoIdentity.dll</HintPath>
     </Reference>
     <Reference Include="ProtoModels">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/ProtoModels.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/ProtoModels.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.MobileAnalytics">
-        <HintPath>D:/Mastercode/se06-18.2/Assets/Plugins/AWSSDK.MobileAnalytics.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Assets/Plugins/AWSSDK.MobileAnalytics.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -1706,31 +1709,31 @@
         <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:/Mastercode/se06-18.2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>E:/se06-18.2-1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
