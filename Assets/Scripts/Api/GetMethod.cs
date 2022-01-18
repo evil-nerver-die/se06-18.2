@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
-// using SimpleJSON;
-// using Newtonsoft.Json;
-
+using SimpleJSON;
 
 public class GetMethod : MonoBehaviour
 {
@@ -13,25 +11,10 @@ public class GetMethod : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetData();
-    }
-
-    void GetData() => StartCoroutine(GetData_Coroutine());
-
-    IEnumerator GetData_Coroutine()
-    {
-        string url = "https://locrian-humorous-crow.glitch.me/coins/1";
-        using(UnityWebRequest request = UnityWebRequest.Get(url))
-        {
-            yield return request.SendWebRequest();
-            // Coin[] c = JsonConvert.DeserializeObject<Coin[]>(request.downloadHandler.text);
-            Coin c = JsonUtility.FromJson<Coin>(request.downloadHandler.text);
-            if(request.isNetworkError || request.isHttpError)
-                Debug.Log(request.error);
-            else
-                
-                    Debug.Log(c.count);
-                
-        }
+        string jsonResponse = ApiHelper.getApiData("https://lmh-json-api.herokuapp.com/coins");
+        JSONNode itemsData = JSON.Parse(jsonResponse);
+        string coinText = "User: " + itemsData[0]["userId"] + " - score: " + itemsData[0]["count"] + "\n"
+                        + "User: " + itemsData[1]["userId"] + " - score: " + itemsData[1]["count"];
+        Debug.Log(coinText);
     }
 }
