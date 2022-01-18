@@ -33,11 +33,17 @@ public class WalletManager
 		if (currencyType == CurrencyType.coins)
 		{
 			this.BuyItemCoins(price);
+			var tempgameObject = new GameObject();
+			PostData post = tempgameObject.AddComponent<PostData>();
+			post.postCoin();
 			return;
 		}
 		if (currencyType == CurrencyType.diamonds)
 		{
 			this.BuyItemDiamonds(price);
+			var tempgameObject = new GameObject();
+			PostData post = tempgameObject.AddComponent<PostData>();
+			post.postStar();
 			return;
 		}
 		this.BuyItemDollars(price);
