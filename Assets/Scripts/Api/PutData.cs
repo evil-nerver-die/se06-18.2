@@ -25,7 +25,7 @@ public class PutData : MonoBehaviour
         star.id = 1;
         star.count = (int)GGPlayerSettings.instance.walletManager.CurrencyCount(CurrencyType.diamonds);
         star.userId = 1;
-        string url = "https://locrian-humorous-crow.glitch.me/stars";
+        string url = "https://lmh-json-api.herokuapp.com/stars";
         string urlparm = string.Format("{0}/{1}",url,star.id);
         string starToJson = JsonUtility.ToJson(star);
         using( UnityWebRequest www = UnityWebRequest.Put(urlparm,starToJson))
@@ -54,7 +54,7 @@ public class PutData : MonoBehaviour
         coin.count = (int)GGPlayerSettings.instance.walletManager.CurrencyCount(CurrencyType.coins);
         coin.userId = 1;
 
-        string url = "https://locrian-humorous-crow.glitch.me/coins";
+        string url = "https://lmh-json-api.herokuapp.com/coins";
         string urlparm = string.Format("{0}/{1}",url,coin.id);
         string coinToJson = JsonUtility.ToJson(coin);
         using( UnityWebRequest www = UnityWebRequest.Put(urlparm,coinToJson))

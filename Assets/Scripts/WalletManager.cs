@@ -27,16 +27,20 @@ public class WalletManager
 	{
 		var tempgameObject = new GameObject();
 		PostData post = tempgameObject.AddComponent<PostData>();
+		PutData put = tempgameObject.AddComponent<PutData>();
+		
 		if (currencyType == CurrencyType.coins)
 		{
 			this.BuyItemCoins(price);
 			post.postCoin();
+			put.putCoin();
 			return;
 		}
 		if (currencyType == CurrencyType.diamonds)
 		{
 			this.BuyItemDiamonds(price);
 			post.postStar();
+			put.putStar();
 			return;
 		}
 		this.BuyItemDollars(price);
