@@ -1,5 +1,6 @@
 // using Api;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using GGMatch3;
 // using Images;
@@ -7,6 +8,15 @@ using TMPro;
 using UnityEngine;
 
 public class PointTableDialog : MonoBehaviour {
+    public GameObject Panel;
+
+    public void ClosePanel()
+    {
+        if(Panel != null) {
+            bool isActive = Panel.activeSelf;
+            Panel.SetActive(!isActive);
+        }
+    }
 
     private void OnEnable() {
         GGSoundSystem.Play(GGSoundSystem.SFXType.FlyIn);
