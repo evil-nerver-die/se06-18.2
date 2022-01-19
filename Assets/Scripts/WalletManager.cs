@@ -1,7 +1,6 @@
 using System;
 using ProtoModels;
 using UnityEngine;
-
 public class WalletManager
 {
 	public WalletManager(PlayerModel model, WalletManager.OnSave onSave)
@@ -9,12 +8,10 @@ public class WalletManager
 		this.model = model;
 		this.onSave = onSave;
 	}
-
 	public void ReloadModel(PlayerModel model)
 	{
 		this.model = model;
 	}
-
 	private void DoOnSave()
 	{
 		if (this.onSave != null)
@@ -22,33 +19,28 @@ public class WalletManager
 			this.onSave();
 		}
 	}
-
 	public void BuyItem(SingleCurrencyPrice price)
 	{
 		this.BuyItem(price.cost, price.currency);
 	}
-
 	public void BuyItem(int price, CurrencyType currencyType)
 	{
+		var tempgameObject = new GameObject();
+		PostData post = tempgameObject.AddComponent<PostData>();
 		if (currencyType == CurrencyType.coins)
 		{
 			this.BuyItemCoins(price);
-			var tempgameObject = new GameObject();
-			PostData post = tempgameObject.AddComponent<PostData>();
 			post.postCoin();
 			return;
 		}
 		if (currencyType == CurrencyType.diamonds)
 		{
 			this.BuyItemDiamonds(price);
-			var tempgameObject = new GameObject();
-			PostData post = tempgameObject.AddComponent<PostData>();
 			post.postStar();
 			return;
 		}
 		this.BuyItemDollars(price);
 	}
-
 	public void BuyItemDiamonds(int price)
 	{
 		global::SecureLong s = new global::SecureLong(this.model.secDiamonds, (long)this.model.diamonds);
@@ -57,7 +49,6 @@ public class WalletManager
 		this.model.diamonds = Mathf.Max(0, this.model.diamonds - price);
 		this.DoOnSave();
 	}
-
 	public void BuyItemCoins(int price)
 	{
 		global::SecureLong s = new global::SecureLong(this.model.secCoins, (long)this.model.coins);
@@ -66,7 +57,6 @@ public class WalletManager
 		this.model.coins = Mathf.Max(0, this.model.coins - price);
 		this.DoOnSave();
 	}
-
 	public void BuyItemDollars(int price)
 	{
 		global::SecureLong s = new global::SecureLong(this.model.secGiraffeDollars, (long)this.model.giraffeDollars);
@@ -75,12 +65,10 @@ public class WalletManager
 		this.model.giraffeDollars = Mathf.Max(0, this.model.giraffeDollars - price);
 		this.DoOnSave();
 	}
-
 	public bool CurrencyHasMax(CurrencyType type)
 	{
 		return true;
 	}
-
 	public int MaxCurrencyCount(CurrencyType type)
 	{
 		if (type == CurrencyType.diamonds)
@@ -97,7 +85,6 @@ public class WalletManager
 		}
 		return 0;
 	}
-
 	public void AddCurrency(CurrencyType type, int ammount)
 	{
 		if (type == CurrencyType.coins)
@@ -138,7 +125,6 @@ public class WalletManager
 		}
 		this.DoOnSave();
 	}
-
 	public void SetCurrency(CurrencyType type, int ammount)
 	{
 		if (type == CurrencyType.coins)
@@ -179,7 +165,6 @@ public class WalletManager
 		}
 		this.DoOnSave();
 	}
-
 	public long CurrencyCount(CurrencyType type)
 	{
 		if (ConfigBase.instance.secureCurrency)
@@ -189,12 +174,16 @@ public class WalletManager
 			{
 				// string jsonResponse = ApiHelper.getApiData("http://localhost:3000/stars/1");
 				// return GetData.getStar(jsonResponse);
+				//string jsonResponse = ApiHelper.getApiData("https://lmh-json-api.herokuapp.com/coins/1");
+				//return GetData.getCoin(jsonResponse);
 				secureLong = new global::SecureLong(this.model.secCoins, (long)this.model.coins);
 			}
 			else if (type == CurrencyType.diamonds)
 			{
 				// string jsonResponse = ApiHelper.getApiData("http://localhost:3000/coins/1");
 				// return GetData.getCoin(jsonResponse);
+				//string jsonResponse = ApiHelper.getApiData("https://lmh-json-api.herokuapp.com/stars/1");
+				//return GetData.getStar(jsonResponse);
 				secureLong = new global::SecureLong(this.model.secDiamonds, (long)this.model.diamonds);
 			}
 			else
@@ -215,20 +204,15 @@ public class WalletManager
 		}
 		return (long)this.model.giraffeDollars;
 	}
-
 	public bool CanBuyItemWithPrice(SingleCurrencyPrice price)
 	{
 		return this.CanBuyItemWithPrice(price.cost, price.currency);
 	}
-
 	public bool CanBuyItemWithPrice(int price, CurrencyType currencyType)
 	{
 		return this.CurrencyCount(currencyType) >= (long)price;
 	}
-
 	private WalletManager.OnSave onSave;
-
 	private PlayerModel model;
-
 	public delegate void OnSave();
 }
