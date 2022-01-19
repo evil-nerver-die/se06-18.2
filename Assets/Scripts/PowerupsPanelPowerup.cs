@@ -37,7 +37,7 @@ public class PowerupsPanelPowerup : MonoBehaviour
 		}
 		if (ownedCount <= 0L)
 		{
-			GGUtil.ChangeText(this.countLabel, "-");
+			GGUtil.ChangeText(this.countLabel, "0");
 		}
 		else
 		{
