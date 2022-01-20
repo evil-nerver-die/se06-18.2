@@ -40,7 +40,7 @@ Player Settings Button. In Publishing Setting set new keystore password then cli
 # 1.Phân công nhiệm vụ
     - Add text và create dialog vào game: Lê Hoàng Long.
     - Design UI, thay icon: Trần Thu Hiền.
-    - Kết nối Api Server: Lê Mạnh Hùng Nguyễn Minh Sơn, Nguyễn Tiến Phúc.
+    - Kết nối Api Server: Lê Mạnh Hùng, Nguyễn Minh Sơn, Nguyễn Tiến Phúc.
     - Tester: Lê Mạnh Hùng.
 # 2. Các công việc đã làm được
 ### 2.1. Add Text
