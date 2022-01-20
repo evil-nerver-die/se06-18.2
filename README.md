@@ -27,7 +27,7 @@ Player Settings Button. In Publishing Setting set new keystore password then cli
 
 ## Task lists
 - [x] Design game scenes, replace some icon.
-- [ ] Add text.
+- [x] Add text.
 - [ ] Connect with Api server.
 
 ## Members:
@@ -49,11 +49,13 @@ Player Settings Button. In Publishing Setting set new keystore password then cli
     - Thêm Text vào các mục sau:
         - Giao diện chính của game
         - Phần thông báo của game
-        - Phần in game
+        - Thêm  và chỉ sửa phần thông số vật phẩm in game
         - Giao dịch coin
         - Setting game
-    - Thêm Text vào phần ending game:
+        - Thêm text vào các Dialog giao dịch coin để mua vật phẩm và lượt chơi
+        - Thêm Text vào phần ending game:
         - Thêm text vào phần thông báo cuối màn chơi.
+        - Tạo thêm bảng thống kê điểm sau mỗi màn chơi
 ### 2.2. Design lại UI của Game
     Tự design lại UI của room, tham khảo giao diện game My Home: Design Dream: https://play.google.com/store/apps/details...
     Thay giao diện nội thất trong room:
