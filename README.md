@@ -1,29 +1,28 @@
 # se06-18.2
 
-## Introduction 
-Lập trình game với Unity #1
+## Giới thiệu 
+Lập trình game với Unity #
 
-Design beautiful homes in bright and sunny places and solve 
-hundreds of fun match 3 puzzles in a light and fun match 3 home 
-makeover game.
-Meet Miss Robins, a young bright designer, and help design the 
-decor and furniture to renovate beautiful houses.
-- Hone your design skills by designing the home decor and 
-furniture.
-- Match candy and create power-ups
-- Lot's of match-3 levels to enjoy
-- Light and Fun Gameplay
+Trong game người chơi sẽ được thiết kế lại những ngôi nhà xinh đẹp và 
+giải hàng trăm câu đố match 3 thú vị.
+Gặp gỡ quý cô Robins, một nhà thiết kế trẻ sáng giá và giúp cô ấy trang 
+trí lại nội thất để cải tạo căn nhà.
+- Rèn luyện kĩ năng thiết kế của bạn bằng cách thiết kế lại đồ trang trí
+và nội thất trong nhà.
+- Rất nhiều màn chơi ở nhiều cấp độ để người chơi trải .
+- Game giải trí nhẹ nhàng và thú vị.
 
-## How to setup
+## Cài đặt và chạy project
 
-Use Unity 2020.2.7f1 to open the project
-- JDK version: jdk1.8.0_77
-- gradle version: gradle 6.9
+Để mở Project sử dụng Unity 2020.2.7f1:
+- Phiên bản JDK: jdk1.8.0_77
+- Phiên bản gradle: gradle 6.9
 - Android 11.0 
 - Android SDK build tool 30.0.3
 
-In your Unity editor, choose File/ Build Settings and then click 
-Player Settings Button. In Publishing Setting set new keystore password then click Build to build apk file.
+Trong Unity editor, Chọn File/Build Settings rồi click vào nút cài đặt của
+Người chơi (Player settings). Trong Publishing Setting, đặt mật khẩu mới keystore
+sau đó click vào Build để build file apk.
 
 ## Task lists
 - [x] Design game scenes, replace some icon.
@@ -37,7 +36,7 @@ Player Settings Button. In Publishing Setting set new keystore password then cli
 - Nguyen Tien Phuc
 - Tran Thu Hien
 
-# 1.Phân công nhiệm vụ
+# 1. Phân công nhiệm vụ
     - Add text và create dialog vào game: Lê Hoàng Long.
     - Design UI, thay icon: Trần Thu Hiền.
     - Kết nối Api Server: Lê Mạnh Hùng, Nguyễn Minh Sơn, Nguyễn Tiến Phúc.
