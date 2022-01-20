@@ -1,12 +1,10 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SimpleJSON;
-
-
 using TMPro;
+
 public class GetMethod : MonoBehaviour
 {
 
