@@ -18,6 +18,7 @@ public class PutData : MonoBehaviour
     public static string jsonResponseUser = ApiHelper.getApiData(urlUser);
     public static JSONNode itemsDataUser = JSON.Parse(jsonResponseUser);
     public int userId = 0;
+    public int id = 0;
     public bool valid = true;
 
     public void Start()
@@ -32,12 +33,17 @@ public class PutData : MonoBehaviour
     public IEnumerator putRequestStar()
     {
         foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
-            if(nodeUser["name"] == ReadText.getUsername()) {
+            string content = (string)nodeUser["name"];
+            if(ReadText.getUsername().Trim() == content.Trim()) {
                userId = nodeUser["id"];
-            }else {
-                int c = itemsDataUser.AsArray.Count;
-                userId = itemsDataUser.AsArray[c-1]["id"] + 1;
             }
+            else {
+                int c = itemsDataUser.AsArray.Count;
+                id = itemsDataUser.AsArray[c-1]["id"] + 1;
+            }
+        }
+        if(userId == 0) {
+            userId = id;
         }
         Star star = new Star();
         star.id = userId;
@@ -66,12 +72,17 @@ public class PutData : MonoBehaviour
     public IEnumerator putRequestCoin()
     {
         foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
-            if(nodeUser["name"] == ReadText.getUsername()) {
+            string content = (string)nodeUser["name"];
+            if(ReadText.getUsername().Trim() == content.Trim()) {
                userId = nodeUser["id"];
-            }else {
-                int c = itemsDataUser.AsArray.Count;
-                userId = itemsDataUser.AsArray[c-1]["id"] + 1;
             }
+            else {
+                int c = itemsDataUser.AsArray.Count;
+                id = itemsDataUser.AsArray[c-1]["id"] + 1;
+            }
+        }
+        if(userId == 0) {
+            userId = id;
         }
         Coin coin = new Coin();
         coin.id = userId;

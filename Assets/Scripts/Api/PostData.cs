@@ -20,6 +20,7 @@ public class PostData : MonoBehaviour
     public static string jsonResponseCoin = ApiHelper.getApiData(urlCoin);
     public static JSONNode itemsDataCoin = JSON.Parse(jsonResponseCoin);
     public int userId = 0;
+    public int id = 0;
     public bool valid = true;
 
     public void Start() {
@@ -33,12 +34,17 @@ public class PostData : MonoBehaviour
     public IEnumerator postRequestStar()
     {
         foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
-            if(nodeUser["name"] == ReadText.getUsername()) {
+            string content = (string)nodeUser["name"];
+            if(ReadText.getUsername().Trim() == content.Trim()) {
                userId = nodeUser["id"];
-            }else {
-                int c = itemsDataUser.AsArray.Count;
-                userId = itemsDataUser.AsArray[c-1]["id"] + 1;
             }
+            else {
+                int c = itemsDataUser.AsArray.Count;
+                id = itemsDataUser.AsArray[c-1]["id"] + 1;
+            }
+        }
+        if(userId == 0) {
+            userId = id;
         }
 
         foreach (JSONNode nodeStar in itemsDataStar.AsArray) {
@@ -72,12 +78,17 @@ public class PostData : MonoBehaviour
     public IEnumerator postRequestCoin()
     {
         foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
-            if(nodeUser["name"] == ReadText.getUsername()) {
+            string content = (string)nodeUser["name"];
+            if(ReadText.getUsername().Trim() == content.Trim()) {
                userId = nodeUser["id"];
-            }else {
-                int c = itemsDataUser.AsArray.Count;
-                userId = itemsDataUser.AsArray[c-1]["id"] + 1;
             }
+            else {
+                int c = itemsDataUser.AsArray.Count;
+                id = itemsDataUser.AsArray[c-1]["id"] + 1;
+            }
+        }
+        if(userId == 0) {
+            userId = id;
         }
         foreach (JSONNode nodeCoin in itemsDataCoin.AsArray) {
             if(nodeCoin["userId"] == userId) {
