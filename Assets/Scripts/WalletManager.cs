@@ -30,14 +30,18 @@ public class WalletManager
 
 	public void BuyItem(int price, CurrencyType currencyType)
 	{
+		var tempgameObject = new GameObject();
+		PutData put = tempgameObject.AddComponent<PutData>();
 		if (currencyType == CurrencyType.coins)
 		{
 			this.BuyItemCoins(price);
+			put.putCoin();
 			return;
 		}
 		if (currencyType == CurrencyType.diamonds)
 		{
 			this.BuyItemDiamonds(price);
+			put.putStar();
 			return;
 		}
 		this.BuyItemDollars(price);
@@ -181,10 +185,14 @@ public class WalletManager
 			global::SecureLong secureLong = 0L;
 			if (type == CurrencyType.coins)
 			{
+				//string jsonResponse = ApiHelper.getApiData("https://lmh-json-api.herokuapp.com/coins/1");
+				//return GetData.getCoin(jsonResponse);
 				secureLong = new global::SecureLong(this.model.secCoins, (long)this.model.coins);
 			}
 			else if (type == CurrencyType.diamonds)
 			{
+				//string jsonResponse = ApiHelper.getApiData("https://lmh-json-api.herokuapp.com/stars/1");
+				//return GetData.getStar(jsonResponse);
 				secureLong = new global::SecureLong(this.model.secDiamonds, (long)this.model.diamonds);
 			}
 			else

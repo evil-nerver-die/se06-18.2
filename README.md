@@ -24,6 +24,9 @@ Trong Unity editor, Chọn File/Build Settings rồi click vào nút cài đặt
 Người chơi (Player settings). Trong Publishing Setting, đặt mật khẩu mới keystore
 sau đó click vào Build để build file apk.
 
+*If you want to save your info into api server, create user.txt and put your username*  
+ex: `echo "steve jobs" > user.txt`
+
 ## Task lists
 - [x] Design game scenes, replace some icon.
 - [x] Add text.
