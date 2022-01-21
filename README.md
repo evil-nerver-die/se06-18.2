@@ -25,6 +25,9 @@ Use Unity 2020.2.7f1 to open the project
 In your Unity editor, choose File/ Build Settings and then click 
 Player Settings Button. In Publishing Setting set new keystore password then click Build to build apk file.
 
+*If you want to save your info into api server, create user.txt and put your username*  
+ex: `echo "steve jobs" > user.txt`
+
 ## Task lists
 - [x] Design game scenes, replace some icon.
 - [ ] Add text.
