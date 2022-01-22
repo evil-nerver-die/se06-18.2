@@ -12,15 +12,11 @@ public class PostData : MonoBehaviour
 {
     public static string urlCoin = "https://lmh-json-api.herokuapp.com/coins";
     public static string urlStar = "https://lmh-json-api.herokuapp.com/stars";
-    public static string urlUser = "https://lmh-json-api.herokuapp.com/users";
-    public static string jsonResponseUser = ApiHelper.getApiData(urlUser);
-    public static JSONNode itemsDataUser = JSON.Parse(jsonResponseUser);
     public static string jsonResponseStar = ApiHelper.getApiData(urlStar);
     public static JSONNode itemsDataStar = JSON.Parse(jsonResponseStar);
     public static string jsonResponseCoin = ApiHelper.getApiData(urlCoin);
     public static JSONNode itemsDataCoin = JSON.Parse(jsonResponseCoin);
     public int userId = 0;
-    public int id = 0;
     public bool valid = true;
 
     public void Start() {
@@ -33,18 +29,14 @@ public class PostData : MonoBehaviour
 
     public IEnumerator postRequestStar()
     {
+        string urlUser = "https://lmh-json-api.herokuapp.com/users";
+        string jsonResponseUser = ApiHelper.getApiData(urlUser);
+        JSONNode itemsDataUser = JSON.Parse(jsonResponseUser);
         foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
             string content = (string)nodeUser["name"];
             if(ReadText.getUsername().Trim() == content.Trim()) {
                userId = nodeUser["id"];
             }
-            else {
-                int c = itemsDataUser.AsArray.Count;
-                id = itemsDataUser.AsArray[c-1]["id"] + 1;
-            }
-        }
-        if(userId == 0) {
-            userId = id;
         }
 
         foreach (JSONNode nodeStar in itemsDataStar.AsArray) {
@@ -81,18 +73,14 @@ public class PostData : MonoBehaviour
     }
     public IEnumerator postRequestCoin()
     {
+        string urlUser = "https://lmh-json-api.herokuapp.com/users";
+        string jsonResponseUser = ApiHelper.getApiData(urlUser);
+        JSONNode itemsDataUser = JSON.Parse(jsonResponseUser);
         foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
             string content = (string)nodeUser["name"];
             if(ReadText.getUsername().Trim() == content.Trim()) {
                userId = nodeUser["id"];
             }
-            else {
-                int c = itemsDataUser.AsArray.Count;
-                id = itemsDataUser.AsArray[c-1]["id"] + 1;
-            }
-        }
-        if(userId == 0) {
-            userId = id;
         }
         foreach (JSONNode nodeCoin in itemsDataCoin.AsArray) {
             if(nodeCoin["id"] == userId) {
@@ -130,6 +118,9 @@ public class PostData : MonoBehaviour
 
     public IEnumerator postRequestUser()
     {
+        string urlUser = "https://lmh-json-api.herokuapp.com/users";
+        string jsonResponseUser = ApiHelper.getApiData(urlUser);
+        JSONNode itemsDataUser = JSON.Parse(jsonResponseUser);
         User user = new User();
         user.name = ReadText.getUsername();
         string userToJson = JsonUtility.ToJson(user);
