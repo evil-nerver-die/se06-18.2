@@ -14,11 +14,14 @@ public class DeleteData : MonoBehaviour
     {
         // StartCoroutine(deleteStar()); 
         // StartCoroutine(deleteCoin()); 
+        // for ( int i = 2; i<=19;i++) {
+        //     StartCoroutine(deleteStar(i)); 
+        // }
     }
     public IEnumerator deleteStar(int id)
     {
 
-        string url = "https://locrian-humorous-crow.glitch.me/stars";
+        string url = "https://lmh-json-api.herokuapp.com/stars";
         string urlparm = string.Format("{0}/{1}",url,id);
         using( UnityWebRequest www = UnityWebRequest.Delete(urlparm))
         {

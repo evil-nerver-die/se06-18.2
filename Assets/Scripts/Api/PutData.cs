@@ -7,26 +7,49 @@ using UnityEngine.Networking;
 using System;
 using System.IO;
 using System.Text;
+using SimpleJSON;
 
 public class PutData : MonoBehaviour
 {
+
+    public static string urlCoin = "https://lmh-json-api.herokuapp.com/coins";
+    public static string urlStar = "https://lmh-json-api.herokuapp.com/stars";
+    public static string urlUser = "https://lmh-json-api.herokuapp.com/users";
+    public static string jsonResponseUser = ApiHelper.getApiData(urlUser);
+    public static JSONNode itemsDataUser = JSON.Parse(jsonResponseUser);
+    public int userId = 0;
+    public int id = 0;
+    public bool valid = true;
+
     public void Start()
     {
-        //putCoin(); 
-        //putStar();
+        // putCoin(); 
+        // putStar();
     }
-
+    
     public void putCoin() => StartCoroutine(putRequestCoin());
     public void putStar() => StartCoroutine(putRequestStar());
 
     public IEnumerator putRequestStar()
     {
+        foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
+            string content = (string)nodeUser["name"];
+            if(ReadText.getUsername().Trim() == content.Trim()) {
+               userId = nodeUser["id"];
+            }
+            else {
+                int c = itemsDataUser.AsArray.Count;
+                id = itemsDataUser.AsArray[c-1]["id"] + 1;
+            }
+        }
+        if(userId == 0) {
+            userId = id;
+        }
         Star star = new Star();
-        star.id = 1;
+        star.id = userId;
         star.count = (int)GGPlayerSettings.instance.walletManager.CurrencyCount(CurrencyType.diamonds);
-        star.userId = 1;
-        string url = "https://lmh-json-api.herokuapp.com/stars";
-        string urlparm = string.Format("{0}/{1}",url,star.id);
+        star.userId = userId;
+        string urlparm = string.Format("{0}/{1}",urlStar,star.id);
         string starToJson = JsonUtility.ToJson(star);
         using( UnityWebRequest www = UnityWebRequest.Put(urlparm,starToJson))
         {
@@ -48,14 +71,25 @@ public class PutData : MonoBehaviour
     }
     public IEnumerator putRequestCoin()
     {
-
+        foreach (JSONNode nodeUser in itemsDataUser.AsArray) {
+            string content = (string)nodeUser["name"];
+            if(ReadText.getUsername().Trim() == content.Trim()) {
+               userId = nodeUser["id"];
+            }
+            else {
+                int c = itemsDataUser.AsArray.Count;
+                id = itemsDataUser.AsArray[c-1]["id"] + 1;
+            }
+        }
+        if(userId == 0) {
+            userId = id;
+        }
         Coin coin = new Coin();
-        coin.id = 1;
+        coin.id = userId;
         coin.count = (int)GGPlayerSettings.instance.walletManager.CurrencyCount(CurrencyType.coins);
-        coin.userId = 1;
+        coin.userId = userId;
 
-        string url = "https://lmh-json-api.herokuapp.com/coins";
-        string urlparm = string.Format("{0}/{1}",url,coin.id);
+        string urlparm = string.Format("{0}/{1}",urlCoin,coin.id);
         string coinToJson = JsonUtility.ToJson(coin);
         using( UnityWebRequest www = UnityWebRequest.Put(urlparm,coinToJson))
         {
