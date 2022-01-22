@@ -48,7 +48,7 @@ public class PostData : MonoBehaviour
         }
 
         foreach (JSONNode nodeStar in itemsDataStar.AsArray) {
-            if(nodeStar["userId"] == userId) {
+            if(nodeStar["id"] == userId) {
                 valid = false;
             }
         }
@@ -73,6 +73,10 @@ public class PostData : MonoBehaviour
                     Debug.Log("Upload star complete!");
                 }
             }
+        }else {
+            var tempgameObject = new GameObject();
+		    PutData put = tempgameObject.AddComponent<PutData>();
+            put.putStar();
         }
     }
     public IEnumerator postRequestCoin()
@@ -91,7 +95,7 @@ public class PostData : MonoBehaviour
             userId = id;
         }
         foreach (JSONNode nodeCoin in itemsDataCoin.AsArray) {
-            if(nodeCoin["userId"] == userId) {
+            if(nodeCoin["id"] == userId) {
                 valid = false;
             }
         }
@@ -116,6 +120,10 @@ public class PostData : MonoBehaviour
                     Debug.Log("Upload coin complete!");
                 }
             }
+        }else {
+            var tempgameObject = new GameObject();
+		    PutData put = tempgameObject.AddComponent<PutData>();
+            put.putCoin();
         }
 
     }
@@ -152,6 +160,8 @@ public class PostData : MonoBehaviour
             }
         }else {
             Debug.Log("name already exists");
+            postCoin();
+            postStar();
         }
     }
     
