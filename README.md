@@ -30,7 +30,7 @@ ex: `echo "steve jobs" > user.txt`
 ## Task lists
 - [x] Design game scenes, replace some icon.
 - [x] Add text.
-- [ ] Connect with Api server.
+- [x] Connect with Api server.
 
 ## Các thành viên
 - Le Hoang Long
@@ -43,3 +43,8 @@ ex: `echo "steve jobs" > user.txt`
 [Báo cáo hết môn](final_report.md)
 
 ## Một số hình ảnh
+![Screenshot 2022-01-23 155629](https://user-images.githubusercontent.com/54358291/150671562-59e18559-0693-4d48-b8c3-b385b20fbcce.png)
+![Screenshot 2022-01-23 160407](https://user-images.githubusercontent.com/54358291/150671682-1199d421-e6ac-4d11-a485-c4e8a16ff3fd.png)
+![Screenshot 2022-01-23 155706](https://user-images.githubusercontent.com/54358291/150671564-c4911cd9-b603-4ba4-b42f-2e2ab9e2c21a.png)
+![Screenshot 2022-01-23 155922](https://user-images.githubusercontent.com/54358291/150671569-0e927c82-49e0-4941-b93e-34d58c1ed79b.png)
+
